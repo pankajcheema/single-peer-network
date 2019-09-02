@@ -1,0 +1,76 @@
+>>>>>>add packet>>>>>>>>>>>>>>>>>>>
+
+peer chaincode invoke -o orderer.example.com:7050 --tls true --cafile /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem -C $CHANNEL_NAME -n mycc --peerAddresses peer0.org1.example.com:7051 --tlsRootCertFiles /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt -c '{"Args":["addPacket","{\"name\": \"pankaj\",\"description\": \"agsdhagsdhgasjdhgasjdgas\",\"deadline\": \"2019-08-25T07:17:22.578Z\",\"created_by\": \"pamkaj\"}"]}'  
+
+
+>>>>>>>>>>>>>>>>>>....get packet>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+
+peer chaincode query -C $CHANNEL_NAME -n mycc -c '{"Args":["getPacket","e5ef08e91522216ba9d5128ff92fa968bf3b5889c3bff310b0d3fbdd398a1a04"]}'
+
+
+>>>>>>>>>>>>>>>>>>..update package>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+
+
+peer chaincode invoke -o orderer.example.com:7050 --tls true --cafile /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem -C $CHANNEL_NAME -n mycc --peerAddresses peer0.org1.example.com:7051 --tlsRootCertFiles /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt -c '{"Args":["updatePacket","e5ef08e91522216ba9d5128ff92fa968bf3b5889c3bff310b0d3fbdd398a1a04","{\"name\": \"pankajchee\",\"description\": \"agsassssss\",\"deadline\": \"2019-08-25T07:17:22.578Z\",\"created_by\": \"cheema\"}"]}'
+
+>>>>>>>>>>>>>>>>>>>.delete packet >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+
+
+peer chaincode invoke -o orderer.example.com:7050 --tls true --cafile /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem -C $CHANNEL_NAME -n mycc --peerAddresses peer0.org1.example.com:7051 --tlsRootCertFiles /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt -c '{"Args":["deletePacket","a2a2356c9a01e5334ce6d61aa991e101b815d5d29a54decda74e7483b61731fb"]}'
+
+
+
+>>>>>>>>>>>>>.add document>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+
+
+
+peer chaincode invoke -o orderer.example.com:7050 --tls true --cafile /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem -C $CHANNEL_NAME -n mycc --peerAddresses peer0.org1.example.com:7051 --tlsRootCertFiles /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt -c '{"Args":["addDocument","{\"name\":\"pankajdoc\",\"description\":\"pankaj docunemtnnnn\",\"version\":1,\"type\":\"po\",\"url\":\"string\",\"hash\":\"http:\/\/json.parser.online.fr\/\",\"allowed_to_view\":[\"asdgfhgjgkgkgk\"],\"can_uploaded_by\":[\"strasgdgfhfhfhing\"],\"approval_required_groups\":[\"strsgdgdgdgdging\"],\"acknowledged_required_groups\":[\"asfdfdfdfd\"],\"approval_deadline\":\"2019-08-29T15:13:38.058Z\",\"upload_deadline\":\"2019-08-29T15:13:38.058Z\",\"packet_id\":\"e5ef08e91522216ba9d5128ff92fa968bf3b5889c3bff310b0d3fbdd398a1a04\"}"]}'
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>update document>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+peer chaincode invoke -o orderer.example.com:7050 --tls true --cafile /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem -C $CHANNEL_NAME -n mycc --peerAddresses peer0.org1.example.com:7051 --tlsRootCertFiles /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt -c '{"Args":["updateDocument","{\"document_id\":\"551afd692f4bb75cca350f0cf849d1bf7ec65976dd2b8327a6eb62e5884eeed3\",\"name\":\"cheemadoc\",\"description\":\"pankaj docunemtnnnn\",\"version\":1,\"type\":\"po\",\"url\":\"string\",\"hash\":\"http:\/\/json.parser.online.fr\/\",\"allowed_to_view\":[\"asdgfhgjgkgkgk\"],\"can_uploaded_by\":[\"strasgdgfhfhfhing\"],\"approval_required_groups\":[\"strsgdgdgdgdging\"],\"acknowledged_required_groups\":[\"asfdfdfdfd\"],\"approval_deadline\":\"2019-08-29T15:13:38.058Z\",\"upload_deadline\":\"2019-08-29T15:13:38.058Z\",\"packet_id\":\"e5ef08e91522216ba9d5128ff92fa968bf3b5889c3bff310b0d3fbdd398a1a04\"}"]}'
+
+
+>>>>>>>>>>>>>>>>...delete document >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+peer chaincode invoke -o orderer.example.com:7050 --tls true --cafile /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem -C $CHANNEL_NAME -n mycc --peerAddresses peer0.org1.example.com:7051 --tlsRootCertFiles /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt -c '{"Args":["deleteDocument","551afd692f4bb75cca350f0cf849d1bf7ec65976dd2b8327a6eb62e5884eeed3","c8c6cde2f19d59e059dbba640f7e14632acd53dcbca951a3653cc6e658759fc6"]}'
+
+peer chaincode query  -C $CHANNEL_NAME -n mycc -c '{"Args":["getDocument","102c87bb642c94f1ec8742f9e69675a9bc24c89fde1a9f4187e93991f51ccfb7"]}'
+
+
+>>>>>>>>>>>>>..add group>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+peer chaincode invoke -o orderer.example.com:7050 --tls true --cafile /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem -C $CHANNEL_NAME -n mycc --peerAddresses peer0.org1.example.com:7051 --tlsRootCertFiles /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt -c '{"Args":["addGroup","{\"name\":\"testgrp\",\"description\":\"this is  a test grp\"}"]}'
+
+
+>>>>>>>>>>>>>>>>..update group>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+
+peer chaincode invoke -o orderer.example.com:7050 --tls true --cafile /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem -C $CHANNEL_NAME -n mycc --peerAddresses peer0.org1.example.com:7051 --tlsRootCertFiles /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt -c '{"Args":["updateGroup","{\"group_id\":\"0c5d4812b801f2ec4625cd95ffaf7501140eed8e6024f0ab9e433fa5b396f122\",\"name\":\"testgrp2\",\"description\":\"this is  a test grp\"}"]}'
+
+>>>>>>>>>>>>>>>>>>>>>>>>>.get group>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+
+peer chaincode query  -C $CHANNEL_NAME -n mycc -c '{"Args":["getGroup","0c5d4812b801f2ec4625cd95ffaf7501140eed8e6024f0ab9e433fa5b396f122"]}'
+
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>> delete a group >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+peer chaincode invoke -o orderer.example.com:7050 --tls true --cafile /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem -C $CHANNEL_NAME -n mycc --peerAddresses peer0.org1.example.com:7051 --tlsRootCertFiles /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt -c '{"Args":["deleteGroup","0c5d4812b801f2ec4625cd95ffaf7501140eed8e6024f0ab9e433fa5b396f122"]}'
+
+
+
+
+
