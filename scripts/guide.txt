@@ -70,6 +70,12 @@ peer chaincode query  -C $CHANNEL_NAME -n mycc -c '{"Args":["getGroup","0c5d4812
 
 peer chaincode invoke -o orderer.example.com:7050 --tls true --cafile /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem -C $CHANNEL_NAME -n mycc --peerAddresses peer0.org1.example.com:7051 --tlsRootCertFiles /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt -c '{"Args":["deleteGroup","0c5d4812b801f2ec4625cd95ffaf7501140eed8e6024f0ab9e433fa5b396f122"]}'
 
+>>>>>>>>>>>>>>>>>>..add notigfication>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+peer chaincode invoke -o orderer.example.com:7050 --tls true --cafile /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem -C $CHANNEL_NAME -n mycc --peerAddresses peer0.org1.example.com:7051 --tlsRootCertFiles /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt -c '{"Args":["addNotification","{\"sender\":\"test noti\",\"receivers\":[\"asdf\",\"asdf\"],\"type\":1,\"acknowledgements\":[\"asfsfs\",\"asfsfdhjk\"],\"last_date\":\"2019-08-29T15:13:38.058Z\"}"]}'
+
+
+
 
 
 
