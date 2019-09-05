@@ -7,7 +7,7 @@ peer chaincode invoke -o orderer.example.com:7050 --tls true --cafile /opt/gopat
 
 
 
-peer chaincode query -C $CHANNEL_NAME -n mycc -c '{"Args":["getPacket","e5ef08e91522216ba9d5128ff92fa968bf3b5889c3bff310b0d3fbdd398a1a04"]}'
+peer chaincode query -C $CHANNEL_NAME -n mycc -c '{"Args":["getPacket","9d2876e865f93e947b26edc38653d506d83bb50577212c002d48e7a07a4104b4"]}'
 
 
 >>>>>>>>>>>>>>>>>>..update package>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -15,7 +15,7 @@ peer chaincode query -C $CHANNEL_NAME -n mycc -c '{"Args":["getPacket","e5ef08e9
 
 
 
-peer chaincode invoke -o orderer.example.com:7050 --tls true --cafile /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem -C $CHANNEL_NAME -n mycc --peerAddresses peer0.org1.example.com:7051 --tlsRootCertFiles /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt -c '{"Args":["updatePacket","e5ef08e91522216ba9d5128ff92fa968bf3b5889c3bff310b0d3fbdd398a1a04","{\"name\": \"pankajchee\",\"description\": \"agsassssss\",\"deadline\": \"2019-08-25T07:17:22.578Z\",\"created_by\": \"cheema\"}"]}'
+peer chaincode invoke -o orderer.example.com:7050 --tls true --cafile /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem -C $CHANNEL_NAME -n mycc --peerAddresses peer0.org1.example.com:7051 --tlsRootCertFiles /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt -c '{"Args":["updatePacket","{\"packet_id\":\"9d2876e865f93e947b26edc38653d506d83bb50577212c002d48e7a07a4104b4\",\"name\": \"pankajee\",\"description\": \"agsassssss\",\"deadline\": \"2019-08-25T07:17:22.578Z\",\"created_by\": \"cheema\"}"]}'
 
 >>>>>>>>>>>>>>>>>>>.delete packet >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
@@ -32,19 +32,19 @@ peer chaincode invoke -o orderer.example.com:7050 --tls true --cafile /opt/gopat
 
 
 
-peer chaincode invoke -o orderer.example.com:7050 --tls true --cafile /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem -C $CHANNEL_NAME -n mycc --peerAddresses peer0.org1.example.com:7051 --tlsRootCertFiles /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt -c '{"Args":["addDocument","{\"name\":\"pankajdoc\",\"description\":\"pankaj docunemtnnnn\",\"version\":1,\"type\":\"po\",\"url\":\"string\",\"hash\":\"http:\/\/json.parser.online.fr\/\",\"allowed_to_view\":[\"asdgfhgjgkgkgk\"],\"can_uploaded_by\":[\"strasgdgfhfhfhing\"],\"approval_required_groups\":[\"strsgdgdgdgdging\"],\"acknowledged_required_groups\":[\"asfdfdfdfd\"],\"approval_deadline\":\"2019-08-29T15:13:38.058Z\",\"upload_deadline\":\"2019-08-29T15:13:38.058Z\",\"packet_id\":\"e5ef08e91522216ba9d5128ff92fa968bf3b5889c3bff310b0d3fbdd398a1a04\"}"]}'
+peer chaincode invoke -o orderer.example.com:7050 --tls true --cafile /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem -C $CHANNEL_NAME -n mycc --peerAddresses peer0.org1.example.com:7051 --tlsRootCertFiles /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt -c '{"Args":["addDocument","{\"name\":\"pankajdoc\",\"description\":\"pankaj docunemtnnnn\",\"version\":1,\"type\":\"po\",\"url\":\"string\",\"hash\":\"http:\/\/json.parser.online.fr\/\",\"allowed_to_view\":{\"strsgdgdgdgdging\":false,\"asdfghjk\":false},\"can_uploaded_by\":[\"strasgdgfhfhfhing\"],\"approval_required_groups\":{\"strsgdgdgdgdging\":false,\"asdfghjk\":false},\"acknowledged_required_groups\":{\"strsgdgdgdgdging\":false,\"asdfghjk\":false},\"approval_deadline\":\"2019-08-29T15:13:38.058Z\",\"upload_deadline\":\"2019-08-29T15:13:38.058Z\",\"packet_id\":\"0f1d6bd4e8586b42320d053849858e264a69f385d3d01e3350cf0ca2df915126\"}"]}'
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>update document>>>>>>>>>>>>>>>>>>>>>>>>
 
 
-peer chaincode invoke -o orderer.example.com:7050 --tls true --cafile /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem -C $CHANNEL_NAME -n mycc --peerAddresses peer0.org1.example.com:7051 --tlsRootCertFiles /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt -c '{"Args":["updateDocument","{\"document_id\":\"551afd692f4bb75cca350f0cf849d1bf7ec65976dd2b8327a6eb62e5884eeed3\",\"name\":\"cheemadoc\",\"description\":\"pankaj docunemtnnnn\",\"version\":1,\"type\":\"po\",\"url\":\"string\",\"hash\":\"http:\/\/json.parser.online.fr\/\",\"allowed_to_view\":[\"asdgfhgjgkgkgk\"],\"can_uploaded_by\":[\"strasgdgfhfhfhing\"],\"approval_required_groups\":[\"strsgdgdgdgdging\"],\"acknowledged_required_groups\":[\"asfdfdfdfd\"],\"approval_deadline\":\"2019-08-29T15:13:38.058Z\",\"upload_deadline\":\"2019-08-29T15:13:38.058Z\",\"packet_id\":\"e5ef08e91522216ba9d5128ff92fa968bf3b5889c3bff310b0d3fbdd398a1a04\"}"]}'
+peer chaincode invoke -o orderer.example.com:7050 --tls true --cafile /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem -C $CHANNEL_NAME -n mycc --peerAddresses peer0.org1.example.com:7051 --tlsRootCertFiles /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt -c '{"Args":["updateDocument","{\"document_id\":\"9215f449fd9f7e4fed4a951961ac6360cbba942b3107e772078f186f90b403a5\",\"name\":\"cheemadoc\",\"description\":\"pankaj docunemtnnnn\",\"version\":1,\"type\":\"po\",\"url\":\"string\",\"hash\":\"http:\/\/json.parser.online.fr\/\",\"allowed_to_view\":{\"strsgdgdgdgdging\":false,\"asdfghjk\":false},\"can_uploaded_by\":[\"strasgdgfhfhfhing\"],\"approval_required_groups\":{\"strsgdgdgdgdging\":false,\"asdfghjk\":false},\"acknowledged_required_groups\":{\"strsgdgdgdgdging\":false,\"asdfghjk\":false},\"approval_deadline\":\"2019-08-29T15:13:38.058Z\",\"upload_deadline\":\"2019-08-29T15:13:38.058Z\",\"packet_id\":\"75b80faa2f778f7812723941e04a616f3fb1c2f2e5c13e5b2820d9e8373dbc12\"}"]}'
 
 
 >>>>>>>>>>>>>>>>...delete document >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 peer chaincode invoke -o orderer.example.com:7050 --tls true --cafile /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem -C $CHANNEL_NAME -n mycc --peerAddresses peer0.org1.example.com:7051 --tlsRootCertFiles /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt -c '{"Args":["deleteDocument","551afd692f4bb75cca350f0cf849d1bf7ec65976dd2b8327a6eb62e5884eeed3","c8c6cde2f19d59e059dbba640f7e14632acd53dcbca951a3653cc6e658759fc6"]}'
 
-peer chaincode query  -C $CHANNEL_NAME -n mycc -c '{"Args":["getDocument","102c87bb642c94f1ec8742f9e69675a9bc24c89fde1a9f4187e93991f51ccfb7"]}'
+peer chaincode query  -C $CHANNEL_NAME -n mycc -c '{"Args":["getDocument","9215f449fd9f7e4fed4a951961ac6360cbba942b3107e772078f186f90b403a5"]}'
 
 
 >>>>>>>>>>>>>..add group>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
